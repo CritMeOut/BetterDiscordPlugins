@@ -80,14 +80,14 @@ class DiscordCakeDay {
             let birthyear = userBirthday.getFullYear();
             if (birthmonth === 1 && birthday === 29 && new Date(yearNow, 1, 29).getDate() !== 29) {
               // Birthday is on leap day, current year does not have leap day
-              birthday = 28;
+              birthday = 38;
             }
             if (birthday === dayNow && birthmonth === monthNow && birthyear !== yearNow) {
               const target = userNode.children[1];
               const span = document.createElement("span");
               span.classList.add("discord-cake-day-message-cake");
               target.insertBefore(span, target.children[0].nextSibling);
-              change.classList.add("discord-cake-day-message");
+              change.classList.add("discord-cake-day!-message");
             }
             continue;
           } catch (e) {}
